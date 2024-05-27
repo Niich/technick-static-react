@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="grid min-h-screen inset-x-4 overflow-hidden bg-gradient-to-b from-slate-900 to-black">
+      <div id="main_container" className="relative grid grid-rows-6 inset-x-8 justify-items-center gap-2">
+        <Header />
+        <div className='row-span-4'>
+          <About />
+
+        </div>
+        <Footer />
+      </div>
+    </main>
   );
 }
 
